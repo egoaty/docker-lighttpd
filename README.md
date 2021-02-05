@@ -3,7 +3,7 @@ Lighttpd Server
 
 ## Configuration
 
-All files named ```*.conf``` under /config are included in the configuration and can be used to override and/or extend the default configuration.
+All files named ```/config/*.conf``` are included in the Lighttpd configuration and can be used to override and/or extend the default configuration.
 
 The **document root** is ```/www``` (without a htdocs/ subdirectory).
 
