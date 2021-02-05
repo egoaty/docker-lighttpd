@@ -27,7 +27,7 @@ services:
     volumes:
       - ./lighttpd/www:/www
       - ./lighttpd/config:/config
-      - ./lighttpd/log:/log
+      - ./lighttpd/log:/var/log
     ports:
       - 80:80
     restart: unless-stopped
