@@ -16,6 +16,9 @@ fi
 
 chown -R ${user}:${group} /var/log
 
+# Print log messages to stdout
+tail -F /var/log/error.log /var/log/access.log &
+
 # Run Maraschino in foreground
 runcmd="lighttpd -f /etc/lighttpd/lighttpd.conf -D"
 exec ${runcmd}
