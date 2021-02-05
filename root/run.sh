@@ -14,6 +14,8 @@ if ! id ${user} >/dev/null 2>&1; then
         adduser -h / -H -D -G "${group}" -u "${PUID:=100000}" "${user}"
 fi
 
+touch /var/log/error.log
+touch /var/log/access.log
 chown -R ${user}:${group} /var/log
 
 # Print log messages to stdout
