@@ -1,7 +1,8 @@
 ARG DISTRO=alpine:3
 FROM $DISTRO
 
-RUN apk add --no-cache tzdata lighttpd
+RUN apk add -U --no-cache tzdata lighttpd && \
+  rm -rf /var/cache/apk/*
 
 COPY root/ /
 
